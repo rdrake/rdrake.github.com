@@ -1,0 +1,60 @@
+#wrapper {
+	margin-left: auto;
+	margin-right: auto;
+	width: 950px;
+}
+
+h1 {
+	text-transform: capitalize;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+header {
+	padding-top: 30px;
+}
+
+header > h1 > a {
+	text-decoration: none;
+	color: #999;
+}
+
+.caps {
+	padding-top: 20px;
+}
+
+#sidebar ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 1em;
+	text-indent: -1em;
+}
+
+#sidebar ul li:before {
+	content: "\00BB \0020";
+}
+
+.date {
+	text-align: right;
+}
+
+footer > p {
+	text-align: center;
+}
+
+footer > hr {
+	margin-top: 20px;
+}
+
+pre {
+	display: block;
+	font-family: 'Courier New', Courier, Fixed, monospace;
+	overflow: auto;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	padding: 10px;
+	margin: 1em 0 1em 0;
+	font-weight:normal!important;
+}

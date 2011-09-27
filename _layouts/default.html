@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="author" content="Richard Drake" />
+		<title>rdrake.org | Home</title>
+		<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/reset.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/screen.css" media="screen, projection" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/print.css" media="print" />
+		<!--[if lt IE 8]>
+			<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/ie.css" media="screen, projection" />
+		<![endif]-->
+		<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/forms.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/typography.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/blueprint/grid.css" />
+		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+	</head>
+	<body>
+		<div id="wrapper">
+			<header class="span-24">
+				<h1><a href="/">rdrake.org</a></h1>
+				<hr />
+			</header>
+
+			<section id="content" class="span-16 colborder">
+				{{ content }}
+			</section>
+
+			<section id="sidebar" class="span-7 last">
+				<!--<div id="search">
+					<h3 class="caps">Search</h3>
+					<form action="/cgi-bin/omega" method="GET">
+						<input type="search" name="P" />
+						<input type="submit" value="Search" />
+					</form>
+				</div>-->
+
+				<div id="recent-posts">
+					<h3 class="caps">Recent Posts</h3>
+					<ul class="posts">
+						{% for post in site.posts limit:5 %}
+							<li><a href="{{ post.url }}">{{ post.title }}</a> - <span class="quiet">{{ post.date | date_to_string }}</span></li>
+						{% endfor %}
+						
+						<li><a href="/posts">Post Archive</a></li>
+					</ul>
+				</div>
+
+				<div id="contact">
+					<h3 class="caps">Contact</h3>
+					<ul>
+						<li><a href="mailto:rdrake@rdrake.org">Email</a></li>
+						<li><a href="http://twitter.com/rdrake1">Twitter</a></li>
+						<li><a href="http://github.com/rdrake">GitHub</a></li>
+					</ul>
+				</div>
+			</section>
+			<footer class="span-24">
+				<hr />
+				<p>Copyright &copy; 2011 <a href="mailto:rdrake@rdrake.org">Richard Drake</a>.  Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a>.</p>
+			</footer>
+		</div>
+
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-24292795-1']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script');
+				ga.type = 'text/javascript';
+				ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</body>
+</html>
