@@ -3,15 +3,15 @@ layout: post
 title: OS X Lion Server Gateway Setup Assistant fails to create a working NAT setup
 ---
 
-# Problem #
+## Problem ##
 
 After running the NAT Gateway Setup Assistant in Server Admin, clients are able to successfully ping the NAT gateway, resolve DNS, and obtain IP addresses via DHCP, but cannot access external servers.  The internet connection of the gateway works, showing that the network equipment is not the problem.
 
-# Solution #
+## Solution ##
 
 The solution took a while to figure out.  After much searching, I stumbled across a [support document](http://support.apple.com/kb/TS3887) from Apple acknowledging this issue and providing instructions on how to fix it.  I intend to expand upon these instructions, hopefully providing a simple guide to fixing this problem.
 
-## Run the Gateway Setup Assistant ##
+### Run the Gateway Setup Assistant ###
 
 Since you've likely fiddled around with the settings in an effort to fix the problem, re-run the Gateway Setup Assistant to reset any settings back to their original values.  You will need the following information handy from your network administrator:
 
@@ -31,21 +31,21 @@ Use the following settings:
 
 Confirm that the settings the wizard produced are correct for your setup and click **Continue**.  At this point your clients should not be able to access the Internet.  We need to make some manual changes.
 
-## System Preferences &rarr; Network ##
+### System Preferences &rarr; Network ###
 
-### WAN Interface ###
+#### WAN Interface ####
 
 These settings will largely depend on your network setup.  You will want to configure IPv4 manually, and specify the correct outgoing settings.  Take note of the outgoing DNS server here, you will need it later.
 
-### LAN Interface ###
+#### LAN Interface ####
 
 The IP address assigned to the internal interface by the wizard is incorrect and must be changed.  It will have assigned it the IP of **192.168.1.1**, it must be changed to **192.168.2.1**.  The subnet mask, router, and DNS server should be fine.  You can leave the search domain blank.
 
 [![System Preferences &rarr; Network, LAN Interface](/assets/images/osxslion/lolwut/t/sp_net_int.png)](/assets/images/osxslion/lolwut/sp_net_int.png)
 
-## Server Admin ##
+### Server Admin ###
 
-### DHCP ###
+#### DHCP ####
 
 Since we've changed the IP of the server, the subnets must also be modified.  In Server Admin choose the DHCP tab and click **Subnets** in the toolbar.  Remove **all** subnets created by the wizard.  Create a new subnet with the following settings:
 
@@ -67,7 +67,7 @@ Be sure to check the Enable checkbox beside your newly created subnet.  Save the
 
 To verify that your DHCP server is working correctly, disable and then enable an interface on one of the client machines.  If it obtains an IP address in the form **192.168.2.xxx** then you have correctly configured DHCP.
 
-### DNS ###
+#### DNS ####
 
 By comparison, DNS is simple to configure.  Select the DNS tab on the right, click the **Settings** toolbar item that appears, and add a **Forwarder IP Address**.  This should be the same as the external DNS server specified in the DHCP setup above.  This server is used to answer queries not cached on the OS X Server machine.
 
@@ -85,7 +85,7 @@ If you receive a response in the following form, then you have correctly configu
 
 If not, verify that you have added a **Forwarder IP Address** correctly and try restarting the DNS service.
 
-### NAT ###
+#### NAT ####
 
 The NAT service is the only one correctly configured by the setup wizard.  To verify, click the NAT tab on the left, then open the **Settings** toolbar.  Verify that the **IP Forwarding and Network Address Translation (NAT)** option is selected, that the **External network interface** is correctly selected, and check **Enable NAT Port Mapping Protocol**.
 
@@ -93,11 +93,11 @@ The NAT service is the only one correctly configured by the setup wizard.  To ve
 
 If you make a change, save your settings and restart the NAT service.
 
-### Firewall ###
+#### Firewall ####
 
 This is by far the trickiest service to configure.  Select the Firewall tab, then the **Settings** toolbar icon.
 
-#### Address Groups ###
+##### Address Groups #####
 
 Remove all address groups created by the wizard.  This should include any named in the form **192.168.xxx-net***.
 
@@ -105,13 +105,13 @@ Add a new IP address group, naming it 192.168.2-net, or similar.  If you used th
 
 [![Adding a Firewall group](/assets/images/osxslion/lolwut/t/fw_group.png)](/assets/images/osxslion/lolwut/fw_group.png)
 
-#### Services ####
+##### Services #####
 
 Be sure to select your newly created service in **Editing services for**.  For testing purposes, select the **Allow all traffic** radio button and save changes.  If you have performed all of the steps correctly, your clients should now be able to ping external servers and access the web.
 
 A better firewall configuration is out of the scope of this document.
 
-# Troubleshooting #
+## Troubleshooting ##
 
 * By far the biggest problem I had was getting the firewall rules all correct.  If you suddenly lose the ability to ping external servers, access the web, etc. and you were adjusting firewall rules, chances are you made a mistake.
 * I've also found that OS X Server's services sometimes break and need to be restarted.  Typically restarting DNS or NAT fixes any issues.  You can double-check which service is the issue by attepting to run the `host` command from above again.  If it returns a result, NAT is broken.  If it does not, DNS is broken.  Repeat this until everything works.
