@@ -4,6 +4,10 @@
 	width: 950px;
 }
 
+#sidebar ul {
+	font-size: 100%;
+}
+
 h1 {
 	text-transform: capitalize;
 }
@@ -50,7 +54,7 @@ footer > hr {
 
 pre {
 	display: block;
-	font-family: 'Courier New', Courier, Fixed, monospace;
+	font-family: Consolas, 'Courier New', Courier, Fixed, monospace;
 	overflow: auto;
 	border: 1px solid #ccc;
 	background-color: #eee;

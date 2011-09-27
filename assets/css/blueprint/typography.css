@@ -124,5 +124,5 @@ caption     { background: #eee; }
 
 /* Change main font sizes
 ------------------------------------------------------------- */
-p { font-size: 125%; }
+p, ul, ol { font-size: 125%; }
 footer > p { font-size: 90%; }
