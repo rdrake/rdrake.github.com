@@ -36,6 +36,7 @@ header > h1 > a {
 
 #content {
 	overflow: scroll;
+	min-height: 30em;
 }
 
 #sidebar ul {
