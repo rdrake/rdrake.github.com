@@ -35,7 +35,7 @@ header > h1 > a {
 }
 
 #content {
-	overflow: scroll;
+	overflow: auto;
 	min-height: 30em;
 }
 
