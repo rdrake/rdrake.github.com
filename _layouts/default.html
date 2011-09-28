@@ -17,25 +17,58 @@
 		<script src="/assets/js/anal.js"></script>
 	</head>
 	<body>
-		<div id="wrapper">
-			<header class="span-24">
+		<div id="wrapper" class="container">
+			<header class="span-24 last">
 				<h1><a href="/">rdrake.org</a></h1>
 				<hr />
 			</header>
 
-			<section id="content" class="span-16 colborder">
+			<section id="content" class="clear span-24 last">
 				<h1>{{ page.title }}</h1>
 				{{ content }}
 			</section>
 
-			<section id="sidebar" class="span-7 last">
-				<!--<div id="search">
+			<footer>
+				<div id="left-col" class="clear span-8">
+					<h3 class="caps">About</h3>
+					<p>This site is hosted on <a href="http://github.com/">github</a>:<a href="http://pages.github.com/">pages</a> and powered by <a href="http://jekyllrb.com/">Jekyll</a>.</p>
+					<p>Content copyright &copy; 2011 <a href="mailto:rdrake@rdrake.org">Richard Drake</a>.</p>
+				</div>
+				<div id="mid-col" class="span-8">
+					<h3 class="caps">Recent Posts (<a href="/posts">Archive</a>)</h3>
+					<ul class="posts">
+						{% for post in site.posts limit:5 %}
+							<li><a href="{{ post.url }}">{{ post.title }}</a> - <span class="quiet">{{ post.date | date_to_string }}</span></li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div id="right-col" class="span-8 last">
+					<h3 class="caps">Contact</h3>
+					<p>
+						<!--<a href="http://github.com/rdrake">
+							<img src="/assets/images/site/octocat.jpg" />
+						</a>
+						<a href="http://twitter.com/rdrake1">
+							<img src="/assets/images/site/twitter_bird.png" />
+						</a>-->
+						<a class="contact-link" href="http://github.com/rdrake">
+							<img src="/assets/images/site/octocat.jpg" />
+						</a>
+						<a class="contact-link" href="http://twitter.com/rdrake1">
+							<img src="/assets/images/site/twitter_bird.png" />
+						</a>
+					</p>
+				</div>
+			</footer>
+
+			<!--<section id="sidebar" class="span-7 last">
+				<div id="search">
 					<h3 class="caps">Search</h3>
 					<form action="/cgi-bin/omega" method="GET">
 						<input type="search" name="P" />
 						<input type="submit" value="Search" />
 					</form>
-				</div>-->
+				</div>
 
 				<div id="recent-posts">
 					<h3 class="caps">Recent Posts</h3>
@@ -60,10 +93,7 @@
 			<footer class="span-24">
 				<hr />
 				<p>Copyright &copy; 2011 <a href="mailto:rdrake@rdrake.org">Richard Drake</a>.  Served by <a href="http://pages.github.com/">github:pages</a>, powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a>.</p>
-			</footer>
+				</footer>-->
 		</div>
-
-		<!-- Whore out my github page -->
-		<a href="http://github.com/rdrake"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/71eeaab9d563c2b3c590319b398dd35683265e85/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub"></a>
 	</body>
 </html>
