@@ -16,45 +16,40 @@
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 		<script src="/assets/js/anal.js"></script>
 	</head>
-	<body>
-		<div id="wrapper" class="container">
-			<header class="span-24 last">
-				<h1><a href="/">rdrake.org</a></h1>
-				<hr />
-			</header>
-
-			<section id="content" class="clear span-24 last">
-				<h1>{{ page.title }}</h1>
-				{{ content }}
-			</section>
-
-			<footer>
-				<hr />
-				<div id="left-col" class="clear span-8">
-					<h3 class="caps">Colophon</h3>
-					<p>This site is hosted on <a href="http://github.com/">github</a>:<a href="http://pages.github.com/">pages</a> and powered by <a href="http://jekyllrb.com/">Jekyll</a>.  Comments are powered by <a href="http://disqus.com/"><span class="logo-disqus">Disqus</span></a>.</p>
-					<p>Content copyright &copy; 2011 <a href="mailto:rdrake@rdrake.org">Richard Drake</a>.</p>
-				</div>
-				<div id="mid-col" class="span-8">
-					<h3 class="caps">Recent Posts (<a href="/posts">Archive</a>)</h3>
-					<ul class="posts">
-						{% for post in site.posts limit:5 %}
-							<li><a href="{{ post.url }}">{{ post.title }}</a> - <span class="quiet">{{ post.date | date_to_string }}</span></li>
-						{% endfor %}
-					</ul>
-				</div>
-				<div id="right-col" class="span-8 last">
-					<h3 class="caps">Follow</h3>
-					<p>
-						<a class="contact-link" href="http://github.com/rdrake">
-							<img src="/assets/images/site/octocat.jpg" />
-						</a>
-						<a class="contact-link" href="http://twitter.com/rdrake1">
-							<img src="/assets/images/site/twitter_bird.png" />
-						</a>
-					</p>
-				</div>
-			</footer>
-		</div>
+	<body class="container">
+		<header class="span-24 last">
+			<h1><a href="/">rdrake.org</a></h1>
+			<hr />
+		</header>
+		<section id="content" class="clear span-24 last">
+			<h1>{{ page.title }}</h1>
+			{{ content }}
+		</section>
+		<footer>
+			<hr />
+			<div id="left-col" class="clear span-8">
+				<h3 class="caps">Colophon</h3>
+				<p>This site is hosted on <a href="http://github.com/">github</a>:<a href="http://pages.github.com/">pages</a> and powered by <a href="http://jekyllrb.com/">Jekyll</a>.  Comments are powered by <a href="http://disqus.com/"><span class="logo-disqus">Disqus</span></a>.</p>					<p>Content copyright &copy; 2011 <a href="mailto:rdrake@rdrake.org">Richard Drake</a>.</p>
+			</div>
+			<div id="mid-col" class="span-8">
+				<h3 class="caps">Recent Posts (<a href="/posts">Archive</a>)</h3>
+				<ul class="posts">
+					{% for post in site.posts limit:5 %}
+						<li><a href="{{ post.url }}">{{ post.title }}</a> - <span class="quiet">{{ post.date | date_to_string }}</span></li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div id="right-col" class="span-8 last">
+				<h3 class="caps">Follow</h3>
+				<p>
+					<a class="contact-link" href="http://github.com/rdrake">
+						<img src="/assets/images/site/octocat.jpg" />
+					</a>
+					<a class="contact-link" href="http://twitter.com/rdrake1">
+						<img src="/assets/images/site/twitter_bird.png" />
+					</a>
+				</p>
+			</div>
+		</footer>
 	</body>
 </html>
