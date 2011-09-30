@@ -6,11 +6,12 @@
 
 /* Fonts and stuff */
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Droid Sans", Helvetica, Arial, sans-serif;
+	font-family: "Arvo", Helvetica, Arial, sans-serif;
+	color: #6a6a6a;
 }
  
 p, li, a {
-	font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+	font-family: "Goudy Bookletter 1911", Georgia, Times, serif;
 }
 
 code, pre {
