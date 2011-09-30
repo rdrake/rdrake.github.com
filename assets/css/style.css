@@ -25,6 +25,11 @@ header {
 	padding-top: 30px;
 }
 
+h1, h2, h3 {
+	text-shadow: 1px 1px 1px #000;
+	filter: dropshadow(color=#000, offx=2, offy=2);
+}
+
 header > h1 > a {
 	text-decoration: none;
 	color: #999;
