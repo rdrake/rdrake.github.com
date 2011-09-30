@@ -4,6 +4,10 @@
 	margin: 0 auto;
 }
 
+#content {
+	border-bottom: 1px solid #708090;;
+}
+
 /* Fonts and stuff */
 h1, h2, h3, h4, h5, h6 {
 	font-family: Lato, Helvetica, Arial, sans-serif;
@@ -30,6 +34,14 @@ h2 {
 
 h3 {
 	font-size: 1.2em;
+}
+
+h4 {
+	font-size: 1.1em;
+}
+
+h5 {
+	font-size: 0.9em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -89,8 +101,6 @@ footer h3 {
 	font-variant: small-caps;
 	font-family: sans-serif;
 	width: 100%;
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 1em;
 	color: #000;
 }
 
@@ -112,7 +122,7 @@ header p {
 footer ul {
 	list-style: none;
 	margin-left: 0;
-	padding-left: 1em;
+	padding-left: 2em;
 	text-indent: -1em;
 }
 
