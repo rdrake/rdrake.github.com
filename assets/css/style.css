@@ -1,39 +1,103 @@
-/* Centre and fix width the design */
-#wrapper {
-	margin-left: auto;
-	margin-right: auto;
-	width: 950px;
-}
-
 /* Centre figures */
 #content p > a > img {
 	display: block;
 	margin: 0 auto;
 }
 
-/* Pimp out the titles */
-h1 {
-	text-transform: capitalize;
+/* Fonts and stuff */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+}
+ 
+p, li, a {
+	font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+}
+
+code, pre {
+	font-family: Consolas, Inconsolas, monospace;
+}
+
+/* Adjust text sizes */
+h1#title {
+	font-size: 2.5em;
 }
 
 h2 {
+	font-size: 1.7em;
 	text-transform: uppercase;
 }
 
-/* Stylize the header */
-header {
-	padding-top: 30px;
+h3 {
+	font-size: 1.2em;
 }
 
-h1, h2, h3 {
-	text-shadow: 1px 1px 1px #000;
-	filter: dropshadow(color=#000, offx=2, offy=2);
+h1, h2, h3, h4, h5, h6 {
+	padding-top: 1em;
+	padding-bottom: 0.5em;
 }
 
-header > h1 > a {
+blockquote {
+	margin: 0.5em 2em 0.5em 2em;
+	font-style: italic;
+}
+
+p {
+	line-height: 1.5em;
+	padding: 0 1em 0.5em 1em;
+}
+
+ul p, ol p {
+	padding-left: 0;
+}
+
+ul li ul {
+	padding-left: 1.5em;
+}
+
+ul, ol {
+	padding-left: 3em;
+}
+
+p + ul, p + ol {
+	padding-top: 0.5em;
+}
+
+ul, ol {
+	padding-bottom: 1em;
+}
+
+pre {
+	margin: 0.5em 2em 0.5em 2em;
+	padding: 1em;
+	border: 1px solid black;
+}
+
+footer {
+	font-size: 90%;
+}
+
+footer h3 {
+	font-variant: small-caps;
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 1em;
+}
+
+a {
 	text-decoration: none;
-	color: #999;
 }
+
+/* Somewhat nicer code display */
+/*pre {
+	display: block;
+	font-family: Consolas, Inconsolas, monospace;
+	overflow: auto;
+	border: 1px solid #ccc;
+	background-color: #eee;
+	padding: 10px;
+	margin: 1em 0 1em 0;
+	font-weight: normal!important;
+}*/
 
 /* Take care of a case where the content (image, code, etc.) overflows */
 #content {
@@ -53,24 +117,7 @@ footer ul li:before {
 	content: "\00BB \0020";
 }
 
-/* Make post content moar large */
-#content p, #content li {
-	font-size: 120%;
-}
-
 /* Date goes to the right */
 .date {
 	text-align: right;
-}
-
-/* Somewhat nicer code display */
-pre {
-	display: block;
-	font-family: Consolas, 'Courier New', Courier, Fixed, monospace;
-	overflow: auto;
-	border: 1px solid #ccc;
-	background-color: #eee;
-	padding: 10px;
-	margin: 1em 0 1em 0;
-	font-weight: normal!important;
 }
