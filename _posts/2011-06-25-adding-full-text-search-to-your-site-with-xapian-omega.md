@@ -12,7 +12,7 @@ This post assumes you have a static website up and running already. It details h
 
 Xapian can be installed either system-wide or in a different location by configuring it with a different prefix. For a VPS system-wide will suffice. For a shared host, Xapian will need to be installed in the home directory.
 
-Browse to the [Xapian Downloads page](http://xapian.org/downloads/) in order to fetch the latest version. You will need both the `xapian-core` and `xapian-omega` packages. The current version as of writing is 1.2.6. Alternatively you can use your distribution packages, however those tend to be out-of-date.
+Browse to the [Xapian Downloads page](http://xapian.org/download/) in order to fetch the latest version. You will need both the `xapian-core` and `xapian-omega` packages. The current version as of writing is 1.2.6. Alternatively you can use your distribution packages, however those tend to be out-of-date.
 
 ### Site-Wide Install ###
 

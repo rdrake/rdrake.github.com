@@ -70,6 +70,8 @@ pre {
 	margin: 0.5em 2em 0.5em 2em;
 	padding: 1em;
 	border: 1px solid black;
+	overflow: auto;
+	background-color: #eee;
 }
 
 footer {
@@ -120,4 +122,15 @@ footer ul li:before {
 /* Date goes to the right */
 .date {
 	text-align: right;
+	font-style: italic;
+	color: #999;
+}
+
+/* Stylize links */
+a {
+	color: #999;
+}
+
+a:visited {
+	color: #888;
 }
