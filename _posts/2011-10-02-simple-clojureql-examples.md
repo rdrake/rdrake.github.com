@@ -14,7 +14,7 @@ At the very least, you must include the ClojureQL and a driver for your database
 
 ### Required Namespaces ###
 
-{% highlight clojure %}
+{% highlight clj %}
 (ns examples.clojureql
     (:require [clojure.java.jdbc :as sql]
         [clojureql.core :as cql]))
@@ -22,7 +22,7 @@ At the very least, you must include the ClojureQL and a driver for your database
 
 ### Database Information ###
 
-{% highlight clojure %}
+{% highlight clj %}
 (def db {
     :classname "org.sqlite.JDBC"
     :subprotocol "sqlite"
@@ -31,7 +31,7 @@ At the very least, you must include the ClojureQL and a driver for your database
 
 ### Relational Algebra ###
 
-{% highlight clojure %}
+{% highlight clj %}
 (def sel (-> (cql/table :tbl)
     (cql/project [:c1 :c2 ...])))
 {% endhighlight %}
