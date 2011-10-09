@@ -85,4 +85,22 @@ Unfortunately the full-text search engine of choice, Lucene, is only capable of 
   (into entity (join " " (vals (entity :__attrib__)))))
 {% endhighlight %}
 
+While tempting to just store the original attributes, it's possible for the user to want to be able to use a prefix in order to search on a specific attribute.  They could, for instance, want to search for all computer science courses.
+
+    __type__:Course +code:csci
+
+Thus all attributes must be indexed, tokenized, and stemmed, while the first two special fields should be indexed and whitespaced analyzed, but not stemmed.
+
+### Document Metadata ###
+
+In order to specify the S.I.T. parameters for a field in a document, we will make use of metadata.  In Clojure, this is easy to add:
+
+{% highlight clj %}
+(def field {:code "csci 4100u"})
+
+(def field-with-meta
+  (with-meta field
+    { :store false :index true :tokenize false}))
+{% endhighlight %}
+
 To be continued...
