@@ -4,8 +4,12 @@
 	margin: 0 auto;
 }
 
+body {
+	background: #000 url("/assets/images/site/cubes.png") repeat;
+}
+
 #content {
-	border-bottom: 1px solid #708090;;
+	border-bottom: 1px solid #708090;
 }
 
 /* Fonts and stuff */
