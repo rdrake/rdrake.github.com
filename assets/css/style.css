@@ -14,8 +14,8 @@ body {
 
 /* Fonts and stuff */
 h1, h2, h3, h4, h5, h6 {
-	font-family: Raleway, "Gochi Hand";/*, Helvetica, Arial, sans-serif;*/
-	color: #708090;
+	font-family: Raleway, Helvetica, Arial, sans-serif;
+	color: #576471;
 	font-weight: normal;
 }
  
