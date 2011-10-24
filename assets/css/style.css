@@ -4,10 +4,6 @@
 	margin: 0 auto;
 }
 
-body {
-	background: #fff url("/assets/images/site/cubes.png") repeat;
-}
-
 #content {
 	border-bottom: 1px solid #708090;
 }
