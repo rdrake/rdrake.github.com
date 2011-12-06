@@ -14,33 +14,12 @@ body {
   width: 600px;
   margin: 30px auto; }
 
-/* Typography, largely stolen from @gf3. */
+/* Typography, somewhat stolen from @gf3 */
 body {
-  /* 18px / 24px */
   font-size: 18px;
   line-height: 24px;
-  /* 16px / 24px
-   * font-size: $font-size / 16 * 1em
-   * line-height: #{$line / $em}em */
-  font-family: Neuton, serif; }
-
-.small {
-  font-size: 12px;
-  line-height: 18px;
-  /* 13px / 18px
-   * font-size: #{$font-size * 0.813 / $em}em
-   * line-height: $line * 0.75 / ($font-size * 0.813) * 1em */ }
-
-.normal, h3 {
-  /* 16px / 24px
-   * font-size: #{$font-size / $em}em
-   * line-height: #{$line / $em}em */
-  /* 24 */ }
-
-.large, h2, h1 {
-  /* 26 / 36px
-   * font-size: #{26 / $em}em
-   * line-height: $line * 1.5 / 26 * 1em */ }
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Neuton, serif;
+  color: #1a1a1a; }
 
 h1 {
   font-size: 36px;
@@ -66,15 +45,16 @@ p, ul, ol, pre {
   margin-bottom: 18px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arimo, Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  color: #576471; }
+  margin-top: 24px;
+  color: black; }
 
 ul, ol {
   margin-left: 30px; }
 
 pre {
-  font-family: Inconsolas, Courier, monospace;
+  font-family: Inconsolas, Consolas, Courier, monospace;
   margin: 0 30px;
   margin-bottom: 18px; }
 
@@ -82,8 +62,22 @@ blockquote {
   border-left: 5px solid #e0e4e7;
   margin: 0 30px;
   padding-left: 10px;
-  font-style: italic; }
+  font-style: italic;
+  color: #414a54; }
+
+a {
+  color: #6d7e8e;
+  text-decoration: none; }
+  a:hover {
+    color: #8997a5;
+    text-decoration: underline; }
+  a:visited, a:active {
+    color: #576471; }
 
 .quiet {
   color: gray;
   text-align: right; }
+
+.small {
+  font-size: 12px;
+  line-height: 18px; }
