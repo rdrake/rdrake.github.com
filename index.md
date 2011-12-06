@@ -1,5 +1,9 @@
 ---
 layout: default
-title: Home
+title: Post Archive
 ---
-I'm working on it, I swear!
+Below is a collection of my babbling.
+
+{% for post in site.posts %}
+ * [{{ post.title }}]({{ post.url }})
+{% endfor %}

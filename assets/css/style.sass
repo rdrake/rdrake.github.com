@@ -1,0 +1,103 @@
+//$line: 24
+//$font-size: 18
+//$em: $font-size * 1
+
+$baseline: 6
+$accent: #576471
+
+/*
+ * Some resetting, most provided by normalize.css
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a,
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q,
+samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio,
+video, canvas
+  margin: 0
+  padding: 0
+  border: 0
+
+/*
+ * Pretty layout
+
+body
+  width: #{$baseline * 100}px
+  margin: #{$baseline * 5}px auto
+
+/*
+ * Typography, largely stolen from @gf3.
+
+body
+  /* 18px / 24px
+  font-size: #{$baseline * 3}px
+  line-height: #{$baseline * 4}px
+  /* 16px / 24px
+   font-size: $font-size / 16 * 1em
+   line-height: #{$line / $em}em
+  font-family: Neuton, serif
+  
+
+.small
+  font-size: #{$baseline * 2}px
+  line-height: #{$baseline * 3}px
+  /* 13px / 18px
+   font-size: #{$font-size * 0.813 / $em}em
+   line-height: $line * 0.75 / ($font-size * 0.813) * 1em
+
+.normal, h3
+  /* 16px / 24px
+   font-size: #{$font-size / $em}em
+   line-height: #{$line / $em}em
+  /* 24
+
+.large, h2, h1
+  /* 26 / 36px
+   font-size: #{26 / $em}em
+   line-height: $line * 1.5 / 26 * 1em
+
+h1
+  font-size: #{6 * $baseline}px
+  line-height: #{7 * $baseline}px
+  margin-bottom: #{$baseline * 3}px
+
+h2
+  font-size: #{$baseline * 5}px
+  line-height: #{$baseline * 6}px
+  margin-bottom: #{$baseline * 2}px
+
+h3, h4
+  font-size: #{$baseline * 4}px
+  line-height: #{$baseline * 5}px
+  margin-bottom: #{$baseline * 2}px
+
+h5
+  font-size: #{$baseline * 3}px
+  line-height: #{$baseline * 4}px
+  margin-bottom: #{$baseline * 2}px
+
+p, ul, ol, pre
+  margin-bottom: #{$baseline * 3}px
+
+h1, h2, h3, h4, h5, h6
+  font-family: Arimo, Helvetica, Arial, sans-serif
+  font-weight: normal
+  color: $accent
+
+ul, ol
+  margin-left: #{$baseline * 5}px
+
+pre
+  font-family: Inconsolas, Courier, monospace
+  margin: 0 #{$baseline * 5}px
+  margin-bottom: #{$baseline * 3}px
+
+blockquote
+  border-left: 5px solid lighten($accent, 50%)
+  margin: 0 #{$baseline * 5}px
+  padding-left: 10px
+  font-style: italic
+
+.quiet
+  color: lighten(#000, 50%)
+  text-align: right

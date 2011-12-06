@@ -7,52 +7,23 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="author" content="Richard Drake" />
 		<title>rdrake.org | {{ page.title }}</title>
-		<link rel="stylesheet" type="text/css" href="/assets/css/960gs/reset.css">
-		<link rel="stylesheet" type="text/css" href="/assets/css/960gs/960_12_col.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/pygments.css">
 		<!-- OM NOM NOM FONTS -->
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911">
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway:100">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Neuton:300,400,700,400italic">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arimo:400,700">
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Inconsolata">
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-		<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-		<script src="/assets/js/anal.js"></script>
 	</head>
 	<body>
-		<div id="wrapper" class="container_12">
-		<header class="alpha grid_12 omega">
+		<header>
 			<p><a href="/">rdrake.org</a> &#187; <a href="{{ page.url }}">{{ page.title }}</a></p>
 		</header>
-		<section id="content" class="alpha grid_12 omega">
+		<article class="content">
 			<h1 id="title">{{ page.title }}</h1>
 			{{ content }}
-		</section>
-		<footer>
-			<hr />
-			<div id="left-col" class="alpha grid_4">
-				<h3 class="caps">Colophon</h3>
-				<p>This site is hosted on <a href="http://github.com/">github</a>:<a href="http://pages.github.com/">pages</a> and powered by <a href="http://jekyllrb.com/">Jekyll</a>.  Comments are powered by <a href="http://disqus.com/"><span class="logo-disqus">Disqus</span></a>.</p>					<p>Content copyright &copy; 2011 <a href="mailto:rdrake@rdrake.org">Richard Drake</a>.</p>
-			</div>
-			<div id="mid-col" class="grid_4">
-				<h3 class="caps">Recent Posts (<a href="/posts">Archive</a>)</h3>
-				<ul class="posts">
-					{% for post in site.posts limit:5 %}
-						<li><a href="{{ post.url }}">{{ post.title }}</a> - <span class="quiet">{{ post.date | date_to_string }}</span></li>
-					{% endfor %}
-				</ul>
-			</div>
-			<div id="right-col" class="grid_4 omega">
-				<h3 class="caps">Follow</h3>
-				<p>
-					<a class="contact-link" href="http://github.com/rdrake">
-						<img src="/assets/images/site/octocat.jpg" />
-					</a>
-					<a class="contact-link" href="http://twitter.com/rdrake1">
-						<img src="/assets/images/site/twitter_bird.png" />
-					</a>
-				</p>
-			</div>
-		</footer>
-		</div>
+		</article>
+		<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script src="/assets/js/anal.js"></script>
 	</body>
 </html>

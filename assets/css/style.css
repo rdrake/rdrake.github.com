@@ -1,148 +1,89 @@
-/* Centre figures */
-#content p > a > img {
-	display: block;
-	margin: 0 auto;
-}
+/* Some resetting, most provided by normalize.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a,
+blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q,
+samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article,
+aside, figure, footer, header, hgroup, nav, section, menu, time, mark, audio,
+video, canvas {
+  margin: 0;
+  padding: 0;
+  border: 0; }
 
-#content {
-	border-bottom: 1px solid #708090;
-}
+/* Pretty layout */
+body {
+  width: 600px;
+  margin: 30px auto; }
 
-/* Fonts and stuff */
-h1, h2, h3, h4, h5, h6 {
-	font-family: Raleway, Helvetica, Arial, sans-serif;
-	color: #576471;
-	font-weight: normal;
-}
- 
-p, li, a {
-	font-family: "Goudy Bookletter 1911", Georgia, Times, serif;
-}
+/* Typography, largely stolen from @gf3. */
+body {
+  /* 18px / 24px */
+  font-size: 18px;
+  line-height: 24px;
+  /* 16px / 24px
+   * font-size: $font-size / 16 * 1em
+   * line-height: #{$line / $em}em */
+  font-family: Neuton, serif; }
 
-code, pre {
-	font-family: Consolas, Inconsolas, monospace;
-}
+.small {
+  font-size: 12px;
+  line-height: 18px;
+  /* 13px / 18px
+   * font-size: #{$font-size * 0.813 / $em}em
+   * line-height: $line * 0.75 / ($font-size * 0.813) * 1em */ }
 
-/* Adjust text sizes */
-h1#title {
-	font-size: 2.5em;
-}
+.normal, h3 {
+  /* 16px / 24px
+   * font-size: #{$font-size / $em}em
+   * line-height: #{$line / $em}em */
+  /* 24 */ }
+
+.large, h2, h1 {
+  /* 26 / 36px
+   * font-size: #{26 / $em}em
+   * line-height: $line * 1.5 / 26 * 1em */ }
+
+h1 {
+  font-size: 36px;
+  line-height: 42px;
+  margin-bottom: 18px; }
 
 h2 {
-	font-size: 1.7em;
-	text-transform: uppercase;
-}
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 12px; }
 
-h3 {
-	font-size: 1.2em;
-}
-
-h4 {
-	font-size: 1.1em;
-}
+h3, h4 {
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 12px; }
 
 h5 {
-	font-size: 0.9em;
-}
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 12px; }
+
+p, ul, ol, pre {
+  margin-bottom: 18px; }
 
 h1, h2, h3, h4, h5, h6 {
-	padding-top: 1em;
-	padding-bottom: 0.5em;
-}
-
-blockquote {
-	margin: 0.5em 2em 0.5em 2em;
-	font-style: italic;
-}
-
-p {
-	line-height: 1.5em;
-	padding: 0 1em 0.5em 1em;
-}
-
-ul p, ol p {
-	padding-left: 0;
-}
-
-ul li ul {
-	padding-left: 1.5em;
-}
+  font-family: Arimo, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #576471; }
 
 ul, ol {
-	padding-left: 3em;
-}
-
-p + ul, p + ol {
-	padding-top: 0.5em;
-}
-
-ul, ol {
-	padding-bottom: 1em;
-}
+  margin-left: 30px; }
 
 pre {
-	margin: 0.5em 2em 0.5em 2em;
-	padding: 1em;
-	border: 1px dashed #708090;
-	overflow: auto;
-	background-color: #eee;
-	font-weight: normal!important;
-	color: #777;
-}
+  font-family: Inconsolas, Courier, monospace;
+  margin: 0 30px;
+  margin-bottom: 18px; }
 
-p, li {
-	font-size: 1.1em;
-}
+blockquote {
+  border-left: 5px solid #e0e4e7;
+  margin: 0 30px;
+  padding-left: 10px;
+  font-style: italic; }
 
-footer {
-	font-size: 90%;
-}
-
-footer h3 {
-	font-variant: small-caps;
-	font-family: sans-serif;
-	width: 100%;
-	color: #000;
-}
-
-a {
-	text-decoration: none;
-}
-
-header p {
-	margin: 2em 0 -1em -0.5em;
-}
-
-/* Take care of a case where the content (image, code, etc.) overflows */
-#content {
-	overflow: auto;
-	min-height: 30em;
-}
-
-/* Pimp out the recent posts list */
-footer ul {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 2em;
-	text-indent: -1em;
-}
-
-footer ul li:before {
-	content: "\00BB \0020";
-}
-
-/* Date goes to the right */
-.date {
-	text-align: right;
-	font-style: italic;
-	color: #999;
-}
-
-/* Stylize links */
-a {
-	color: #999;
-}
-
-a:visited {
-	color: #888;
-}
+.quiet {
+  color: gray;
+  text-align: right; }
