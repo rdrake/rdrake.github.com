@@ -1,6 +1,10 @@
-//$line: 24
-//$font-size: 18
-//$em: $font-size * 1
+// External CSS
+@import url(/assets/css/normalize.css)
+@import url(/assets/css/pygments.css)
+
+// Fonts
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic)
+@import url(http://fonts.googleapis.com/css?family=Inconsolata)
 
 $baseline: 6
 $accent: #576471
@@ -31,7 +35,7 @@ body
 body
   font-size: #{$baseline * 3}px
   line-height: #{$baseline * 4}px
-  font-family: "Adobe Caslon Pro", "Minion Pro", Palatino, "Book Antiqua", Neuton, serif
+  font-family: "Gentium Basic", "Adobe Caslon Pro", "Minion Pro", Palatino, "Book Antiqua", Neuton, serif
   color: lighten(#000, 10%)
   
 h1

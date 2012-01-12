@@ -1,3 +1,7 @@
+@import url(/assets/css/normalize.css);
+@import url(/assets/css/pygments.css);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 /* Some resetting, most provided by normalize.css */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a,
 blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q,
@@ -18,7 +22,7 @@ body {
 body {
   font-size: 18px;
   line-height: 24px;
-  font-family: "Adobe Caslon Pro", "Minion Pro", Palatino, "Book Antiqua", Neuton, serif;
+  font-family: "Gentium Basic", "Adobe Caslon Pro", "Minion Pro", Palatino, "Book Antiqua", Neuton, serif;
   color: #1a1a1a; }
 
 h1 {
