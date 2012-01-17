@@ -72,8 +72,13 @@ ul, ol
 
 pre
   font-family: Inconsolas, Consolas, Courier, monospace
-  margin: 0 #{$baseline * 5}px
+  margin: #{$baseline * 2}px #{$baseline * 5}px
   margin-bottom: #{$baseline * 3}px
+  width: 100%
+  border-top: 1px solid #bbb
+  border-bottom: 1px solid #bbb
+  padding-top: #{$baseline * 2}px
+  padding-bottom: #{$baseline * 2}px
 
 blockquote
   border-left: 5px solid lighten($accent, 50%)
@@ -81,6 +86,13 @@ blockquote
   padding-left: 10px
   font-style: italic
   color: darken($accent, 10%)
+
+figure
+  margin-bottom: #{$baseline * 3}px
+
+figcaption
+  color: lighten(#000, 20%)
+  text-align: center
 
 a
   color: lighten($accent, 10%)

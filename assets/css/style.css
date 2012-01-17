@@ -59,8 +59,13 @@ ul, ol {
 
 pre {
   font-family: Inconsolas, Consolas, Courier, monospace;
-  margin: 0 30px;
-  margin-bottom: 18px; }
+  margin: 12px 30px;
+  margin-bottom: 18px;
+  width: 100%;
+  border-top: 1px solid #bbbbbb;
+  border-bottom: 1px solid #bbbbbb;
+  padding-top: 12px;
+  padding-bottom: 12px; }
 
 blockquote {
   border-left: 5px solid #e0e4e7;
@@ -68,6 +73,13 @@ blockquote {
   padding-left: 10px;
   font-style: italic;
   color: #414a54; }
+
+figure {
+  margin-bottom: 18px; }
+
+figcaption {
+  color: #333333;
+  text-align: center; }
 
 a {
   color: #6d7e8e;
