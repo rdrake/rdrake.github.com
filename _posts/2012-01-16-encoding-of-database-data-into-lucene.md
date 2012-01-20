@@ -112,3 +112,67 @@ By composing together the two sources of information, a complete entity can be c
 #### From Existing Document ####
 
 When converting back to the intermediate representation from a Lucene document, we can make certain assumptions.  Each document is stored with meta-data prefixed and suffixed with two underscores.  In addition, only attributes of interest are stored in each document.  Thus encoding a document is as simple as pulling out required meta-data and disassociating the meta-data from the attributes.
+
+## Appendix ##
+
+### Internal Clojure Representation ###
+
+#### Entity ####
+
+{% highlight clj %}
+(with-meta attrs
+           {:T :class :id})
+{% endhighlight %}
+
+#### Value ####
+
+{% highlight clj %}
+(with-meta attr
+           {:T :class})
+{% endhighlight %}
+
+#### Entity Group ####
+
+{% highlight clj %}
+(with-meta attrs
+           {:T :class :entities})
+{% endhighlight %}
+
+### Lucene Representation ###
+
+#### Entity ####
+
+{% highlight clj %}
+{:T     :entity
+ :class table-name
+ :id    table-name|id-val
+ attr_1 val_1
+ attr_2 val_2
+   .      .
+   .      .
+   .      .
+ :all   val_1 val_2 ...}
+{% endhighlight %}
+
+#### Value ####
+
+{% highlight clj %}
+{:T     :value
+ :class table-name|attr-name
+ attr   val
+ :all   n-gram(val)}
+{% endhighlight %}
+
+#### Entity Group ####
+
+{% highlight clj %}
+{:T        :group
+ :class    relation-desc
+ :entities [table-name|id-val table-name|id-val ...]
+ attr_1    val_1
+ attr_2    val_2
+   .         .
+   .         .
+   .         .
+ :all      val_1 val_2 ...}
+{% endhighlight %}
